@@ -1,4 +1,6 @@
+```php
 <?php
+
 session_start();
 
 if(isset($_SESSION['role']))
@@ -21,6 +23,7 @@ if(isset($_SESSION['role']))
         exit();
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -33,22 +36,63 @@ if(isset($_SESSION['role']))
 
 <title>Online Examination System</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+rel="stylesheet">
 
 <style>
 
+body{
+    background:#f8f9fa;
+}
+
+.navbar-brand{
+    font-weight:700;
+}
+
 .hero{
-    padding:100px 0;
     background:#0d6efd;
-    color:white;
+    color:#fff;
+    padding:100px 0;
+}
+
+.hero h1{
+    font-weight:700;
 }
 
 .feature-card{
-    transition:0.3s;
+    border:none;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .feature-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
+}
+
+.feature-icon{
+    font-size:42px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.stats{
+    background:#fff;
+    padding:60px 0;
+}
+
+.stat-box h2{
+    font-weight:700;
+    color:#0d6efd;
+}
+
+footer{
+    margin-top:50px;
 }
 
 </style>
@@ -62,17 +106,25 @@ if(isset($_SESSION['role']))
 <div class="container">
 
 <a class="navbar-brand" href="#">
-Online Exam System
+Online Examination System
 </a>
 
 <div>
 
-<a href="login.php" class="btn btn-outline-light me-2">
+<a
+href="login.php"
+class="btn btn-outline-light me-2">
+
 Login
+
 </a>
 
-<a href="register.php" class="btn btn-primary">
+<a
+href="register.php"
+class="btn btn-primary">
+
 Register
+
 </a>
 
 </div>
@@ -85,23 +137,33 @@ Register
 
 <div class="container text-center">
 
-<h1 class="display-4 fw-bold">
+<h1 class="display-4">
+
 Online Examination System
+
 </h1>
 
-<p class="lead">
+<p class="lead mt-3 mb-4">
 
-Create exams, manage students,
-conduct assessments and generate results instantly.
+A simple platform for creating exams,
+conducting assessments, and managing results online.
 
 </p>
 
-<a href="login.php" class="btn btn-light btn-lg me-2">
+<a
+href="login.php"
+class="btn btn-light btn-lg me-2">
+
 Login
+
 </a>
 
-<a href="register.php" class="btn btn-warning btn-lg">
+<a
+href="register.php"
+class="btn btn-warning btn-lg">
+
 Register
+
 </a>
 
 </div>
@@ -113,10 +175,12 @@ Register
 <div class="container">
 
 <h2 class="text-center mb-5">
-System Features
+
+Platform Features
+
 </h2>
 
-<div class="row">
+<div class="row g-4">
 
 <div class="col-md-3">
 
@@ -124,29 +188,20 @@ System Features
 
 <div class="card-body text-center">
 
-<h4>👨‍🏫</h4>
+<i class="bi bi-person-workspace feature-icon"></i>
 
-<h5>Teachers</h5>
+<h5>
 
-<p>Create and manage exams.</p>
+Teacher Management
 
-</div>
+</h5>
 
-</div>
+<p>
 
-</div>
+Create exams, manage questions,
+and monitor student performance.
 
-<div class="col-md-3">
-
-<div class="card feature-card h-100">
-
-<div class="card-body text-center">
-
-<h4>📝</h4>
-
-<h5>Students</h5>
-
-<p>Take exams online.</p>
+</p>
 
 </div>
 
@@ -160,11 +215,20 @@ System Features
 
 <div class="card-body text-center">
 
-<h4>⚡</h4>
+<i class="bi bi-journal-check feature-icon"></i>
 
-<h5>Auto Grading</h5>
+<h5>
 
-<p>Instant result generation.</p>
+Online Examinations
+
+</h5>
+
+<p>
+
+Students can take examinations
+from any device with internet access.
+
+</p>
 
 </div>
 
@@ -178,11 +242,47 @@ System Features
 
 <div class="card-body text-center">
 
-<h4>📊</h4>
+<i class="bi bi-stopwatch feature-icon"></i>
 
-<h5>Reports</h5>
+<h5>
 
-<p>Track performance easily.</p>
+Timed Assessments
+
+</h5>
+
+<p>
+
+Built-in exam timer with
+automatic submission.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card feature-card h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-bar-chart-line feature-icon"></i>
+
+<h5>
+
+Analytics & Reports
+
+</h5>
+
+<p>
+
+Track examination performance
+and view detailed results.
+
+</p>
 
 </div>
 
@@ -196,11 +296,53 @@ System Features
 
 </section>
 
+<section class="stats">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-4 stat-box">
+
+<h2>24/7</h2>
+
+<p>System Availability</p>
+
+</div>
+
+<div class="col-md-4 stat-box">
+
+<h2>100%</h2>
+
+<p>Automated Grading</p>
+
+</div>
+
+<div class="col-md-4 stat-box">
+
+<h2>3 Roles</h2>
+
+<p>Admin, Teacher & Student</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <footer class="bg-dark text-white text-center p-4">
 
-Online Examination System © <?php echo date('Y'); ?>
+<div class="container">
+
+Online Examination System &copy; <?php echo date('Y'); ?>
+
+</div>
 
 </footer>
 
 </body>
+
 </html>
+```
