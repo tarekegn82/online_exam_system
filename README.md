@@ -204,4 +204,4 @@ This project is intended for educational and learning purposes. You are free to 
 
 ## Author
 
-Developed as a practical full-stack web application project using PHP, MySQL, Bootstrap, and JavaScript.
+Tarekegn Kelta
